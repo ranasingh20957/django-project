@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALL API</title>
+    <script>
+function callApiAjax()
+{
+    sid=document.getElementById("txtid").value;
+    alert(sid)
+    callapi("http://127.0.0.1:8000/api/getstu/"+sid+"/")
+}
+function callapi(url)
+{
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET",url,true);
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       alert(this.responseText);
+    }
+  };
+  xmlhttp.send();
+
+}
+    </script>
+</head>
+<body>
+    <h1>**CALL API USING AJAX**</h1>
+    Enter Student ID:
+    <input type="text" id="txtid">
+    <button onclick="callApiAjax()">Get Student</button>
+    
+</body>
+</html>

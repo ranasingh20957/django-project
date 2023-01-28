@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT DETIALS</title>
+</head>
+<body bgcolor="yellow">
+    <form method="post">
+        {% csrf_token %}
+    <h1>***STUDENT WISE PAYMENT DETIALS***</h1>
+    Enter Student ID:
+    <input type="text" name="txtid" value="{{stu.id}}">
+    <button type="submit">Show Payment Dtails</button>
+    <br/><br/>
+    <div>
+        <table align="center" bgcolor="yellow" border="3" width="40%" hight="40%">
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Payment Mode</th>
+                <th>Payment Date</th>
+            </tr>
+            {% for p in payments %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{stu.name}}</td>
+                <td>{{p.amount}}</td>
+                <td>{{p.payment_mode}}</td>
+                <td>{{p.payment_date}}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">
+                    <h1>No Payment Found!!</h1>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    </form>
+</body>
+</html>

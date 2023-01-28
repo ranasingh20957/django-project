@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Student</title>
+</head>
+<body bgcolor="yellow">
+    <h1>SHOW STUDENT RECORDS</h1>
+    <table bgcolor="pink" border="3" width="40%">
+        <tr>
+            <td>Name</td>
+            <td>{{stu.name}}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>{{stu.address}}</td>
+        </tr>
+        <tr>
+            <td>Mobileno</td>
+            <td>{{stu.mobileno}}</td>
+        </tr>
+        <tr>
+            <td>DOB</td>
+            <td>{{stu.dob}}</td>
+        </tr>
+        <tr>
+            <td>Image</td>
+            <td> <img src="{{stu.pic.url}}" height="100%" width="100%" alt="pic"/></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body bgcolor="pink">
+    <h1 align="center">**HOME PAGE OF LMS**</h1>
+<table border="3" align="center" width="30%" bgcolor="yellow">
+    <tr>
+        <th>Page Name</th>
+        <th>Reference/Link</th>
+    </tr>
+    <tr>
+        <td>User</td>
+        <td> {{user}} </td>
+    </tr>
+    <tr>
+        <td>Home</td>
+        <td><a href="{% url 'home' %}" target="_blank">Home</a></td>
+    </tr>
+    <tr>
+        <td>Register</td>
+        <td><a href="{% url 'register' %}" target="_blank">Register</a></td>
+    </tr>
+    <tr>
+        <td>Login</td>
+        <td><a href="{% url 'login' %}" target="_blank">Login</a></td>
+    </tr>
+    <tr>
+        <td>Logout</td>
+        <td><a href="{% url 'logout' %}" target="_blank">Logout</a></td>
+    </tr>
+    <tr>
+        <td>Secure1</td>
+        <td><a href="{% url 'secure1' %}" target="_blank">Secure1</a></td>
+    </tr>
+    <tr>
+        <td>Secure2</td>
+        <td><a href="{% url 'secure2' %}" target="_blank">Secure2</a></td>
+    </tr>
+    <tr>
+        <td>Unsecure1</td>
+        <td><a href="{% url 'unsecure1' %}" target="_blank">Unsecure1</a></td>
+    </tr>
+    <tr>
+        <td>Unsecure2</td>
+        <td><a href="{% url 'unsecure2' %}" target="_blank">Unsecure2</a></td>
+    </tr>
+</table>
+</body>
+</html>

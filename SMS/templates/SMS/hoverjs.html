@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+    <script>
+        function change_color()
+        {
+            document.getElementById("btn").style.backgroundColor="yellow";
+            document.getElementById("btn").style.color="red";
+            document.getElementById("btn").style.fontSize="24px";
+            document.getElementById("btn").style.fontFamily="Comic sans ms";
+
+        }
+        function change_back_color()
+        {
+            document.getElementById("btn").style.backgroundColor="blue";
+            document.getElementById("btn").style.color="white";
+        }
+    </script>
+</head>
+<body>
+    <div style="margin-top: 300px;">
+    <center>
+<button id="btn" onmouseover="change_color()" onmouseout="change_back_color()">ADDITIION </button>
+    </center>
+    </div>
+</body>
+</html>

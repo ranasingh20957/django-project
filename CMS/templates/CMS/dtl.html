@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTL</title>
+</head>
+<body style="background-color:aquamarine;">
+    <h1>Example of DTL-(django Template Language)</h1>
+    {{a}}
+    <h2>Conditional statment</h2>
+    {% if a == 100 %}
+    <h1>{{a}} is equal to 100</h1>
+    {% else %}
+    <h1>{{a}} is not equal to 100</h1>
+    {% endif %}
+
+    <h2>wap to find the gretest two number</h2>
+    {% if a > b %}
+    <h2>{{a}} is gretest than {{b}}</h2>
+    {% else %}
+    <h2>{{b}} is gretest then {{a}}</h2>
+    {% endif %}
+
+    <h1>wap to find the gretest among three number</h1>
+    {% if a > b  and a > c %}
+    <h1>{{a}} is gretest than {{b}} and {{c}}</h1>
+    {% elif b > a and b > c %}
+    <h2>{{b}} is gretest than {{a}} and {{c}}</h2>
+    {% else %}
+    <h2>{{c}} is gretest than {{a}} and {{b}}</h2>
+    {% endif %} 
+
+    <h1 align="center"> For Element loop in DTL</h1>
+    <h2 align="center"> We have Following Employee Records:</h2>
+    <table align="center" bgcolor="yellow" border="3" width="50% height=50%">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Mobile No</th>
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.age}}</td>
+            <td>{{emp.Address}}</td>
+            <td>{{emp.Mobileno}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</body>
+</html>
